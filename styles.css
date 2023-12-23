@@ -1,0 +1,296 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.6fr 0.5fr 0.5fr 0.5fr 0.5fr 0.6fr 0.3fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "picture-one picture-one picture-one picture-one picture-one"
+        ". three-articles three-articles three-articles ."
+        "second-picture second-picture second-picture second-picture second-picture"
+        "stats stats stats stats stats"
+        ". three-photos three-photos three-photos ."
+        "reviews reviews reviews reviews reviews"
+        ". best-you-need best-you-need best-you-need ."
+        "footer footer footer footer footer"
+        "info info info info info";
+}
+
+.picture-one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header header"
+        ". create-brand ."
+        ". . .";
+    grid-area: picture-one;
+    background-image: url(first-picture.webp);
+    height: 1000px;
+}
+
+.create-brand {
+    grid-area: create-brand;
+}
+
+.header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background: #FFFFFF;
+}
+
+.three-articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "first-article second-article third-article"
+        "first-article second-article third-article"
+        "first-article second-article third-article";
+    grid-area: three-articles;
+    place-self: center;
+}
+
+.first-article {
+    grid-area: first-article;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-article {
+    grid-area: second-article;
+}
+
+.third-article {
+    grid-area: third-article;
+}
+
+.second-picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". b-logo . . . ."
+        ". b-logo . first-b second-b ."
+        ". b-logo . third-b fourth-b ."
+        ". b-logo . . . .";
+    grid-area: second-picture;
+    background: #111111;
+    ;
+}
+
+.first-b {
+    grid-area: first-b;
+
+}
+
+.second-b {
+    grid-area: second-b;
+}
+
+.third-b {
+    grid-area: third-b;
+}
+
+.fourth-b {
+    grid-area: fourth-b;
+}
+
+.b-logo {
+    grid-area: b-logo;
+    background-image: url(b-logo.webp);
+    height: 400px;
+    width: 320px;
+    place-self: center;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". stats-stats . stats-picture stats-picture"
+        ". stats-stats . stats-picture  stats-picture"
+        ". stats-stats . stats-picture  stats-picture";
+    grid-area: stats;
+    overflow: hidden;
+}
+
+.stats-picture {
+    grid-area: stats-picture;
+}
+
+.stats-stats {
+    grid-area: stats-stats;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+}
+
+.stat-title {
+    display: flex;
+}
+
+.stats-line {
+    width: 430px;
+    height: 10px;
+    background: #111111;
+}
+
+.three-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". members-title ."
+        "photo-1 photo-2 photo-3"
+        "photo-1 photo-2 photo-3";
+    grid-area: three-photos;
+    place-self: center;
+}
+
+.members-title {
+    grid-area: members-title;
+    place-self: center;
+}
+
+.photo-1 {
+    grid-area: photo-1;
+    place-self: center;
+}
+
+.photo-2 {
+    grid-area: photo-2;
+    place-self: center;
+}
+
+.photo-3 {
+    grid-area: photo-3;
+    place-self: center;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . . . ."
+        ". review-1 review-2 review-3 ."
+        ". . . . .";
+    grid-area: reviews;
+    place-self: center;
+}
+
+.review-1 {
+    grid-area: review-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-self: center;
+}
+
+.review-2 {
+    grid-area: review-2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-self: center;
+}
+
+.review-3 {
+    grid-area: review-3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-self: center;
+}
+
+.review-photo {
+    height: 100px;
+    width: 100px;
+    border-radius: 55px;
+    place-self: center;
+}
+
+.best-you-need {
+    display: grid;
+    grid-template-columns: 1.2fr 0.7fr 0.7fr 1.4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". best-title best-title ."
+        ". best-paragraphs best-photo ."
+        ". best-paragraphs best-photo .";
+    grid-area: best-you-need;
+    place-self: center;
+}
+
+.best-title {
+    grid-area: best-title;
+    place-self: center;
+}
+
+.best-paragraphs {
+    grid-area: best-paragraphs;
+    place-self: center;
+}
+
+.paragraph {
+    display: flex;
+    background: grey;
+    height: 75px;
+    width: 640px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.best-photo {
+    grid-area: best-photo;
+    place-self: center;
+}
+
+.footer {
+    grid-area: footer;
+    background: #222222;
+    display: flex;
+    place-content: space-around;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 261px;
+
+}
+
+.footer-section>h1 {
+    color: #FFFFFF
+}
+
+.footer-section>span {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.info {
+    grid-area: info;
+    background: #333333;
+}
